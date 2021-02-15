@@ -15,15 +15,6 @@ repositories {
     mavenCentral()
     maven(url = "https://libraries.minecraft.net/")
     maven(url = "https://jitpack.io")
-    maven("https://dl.bintray.com/kotlin/exposed")
-    maven {
-        name = "GitHubPackages"
-        url = uri("https://maven.pkg.github.com/motionmc/core/")
-        credentials {
-            username = project.findProperty("gpr.user") as String? ?: System.getenv("GITHUB_ACTOR")
-            password = project.findProperty("gpr.key") as String? ?: System.getenv("GITHUB_TOKEN")
-        }
-    }
     maven(url = "https://repo.spongepowered.org/repository/maven-public")
 }
 
